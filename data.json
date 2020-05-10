@@ -1,0 +1,88 @@
+{
+  "registre": [
+    {
+        "id":  0,
+        "nom": "Nombre0",
+        "cognom1": "Apellido0",
+        "cognom2": "Apellido0",
+        "trabajo": "Jefazo"
+    },
+    {
+        "id": 1,
+        "nom": "Nombre1",
+        "cognom1": "Apellido1",
+        "cognom2": "Apellido1",
+        "trabajo": "Sub-Jefazo"
+    },
+    {
+        "id": 2,
+        "nom": "Nombre2",
+        "cognom1": "Apellido2",
+        "cognom2": "Apellido2",
+        "trabajo": "Casi Sub-Jefazo"
+    },
+    {
+        "id": 3,
+        "nom": "Nombre3",
+        "cognom1": "Apellido3",
+        "cognom2": "Apellido3",
+        "trabajo": "El que mira facebook"
+    },
+    {
+        "id": 4,
+        "nom": "Nombre4",
+        "cognom1": "Apellido4",
+        "cognom2": "Apellido4",
+        "trabajo": "El que lo intenta, pero no"
+    },
+    {
+        "id": 5,
+        "nom": "Nombre5",
+        "cognom1": "Apellido5",
+        "cognom2": "Apellido5",
+        "trabajo": "Mindundi"
+    },
+    {
+        "id": 6,
+        "nom": "Nombre6",
+        "cognom1": "Apellido6",
+        "cognom2": "Apellido6",
+        "trabajo": "El bueno pero le cae mal al jefazo"
+    },
+    {
+        "id": 7,
+        "nom": "Nombre7",
+        "cognom1": "Apellido7",
+        "cognom2": "Apellido7",
+        "trabajo": "La chica"
+    },
+    {
+        "id": 8,
+        "nom": "Nombre8",
+        "cognom1": "Apellido8",
+        "cognom2": "Apellido8",
+        "trabajo": "Becario"
+    },
+    {
+        "id": 9,
+        "nom": "Nombre9",
+        "cognom1": "Apellido9",
+        "cognom2": "Apellido9",
+        "trabajo": "Recepcionista"
+    },
+    {
+        "id": 10,
+        "nom": "Nombre10",
+        "cognom1": "Apellido10",
+        "cognom2": "Apellido10",
+        "trabajo": "Limpiador"
+    },
+    {
+        "id": 11,
+        "nom": "Pedro Antonio",
+        "cognom1": "Rodriguez",
+        "cognom2": "Maradona",
+        "trabajo": "mucho"
+    }
+  ]
+}
