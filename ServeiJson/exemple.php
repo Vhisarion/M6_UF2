@@ -37,7 +37,7 @@ try {
     return;
 }
 
-$query = 'DELETE FROM json.registre WHERE id = 10';
+$query = 'SELECT * FROM json.registre WHERE id = 1000';
 try {
 $result = pg_query($query);
 } catch (Exception $e) {
@@ -52,6 +52,15 @@ $result = pg_query($query);
     echo $myJson;
     return;
 }
+
+if (pg_num_rows($result) < 1) {
+    $myObj = new stdClass;
+    $myObj->result="No rows found";
+    $myJson = json_encode($myObj);
+    echo $myJson;
+    return;
+}
+
 while($row = pg_fetch_assoc($result))
     {
         $data[] = $row;
@@ -62,22 +71,4 @@ while($row = pg_fetch_assoc($result))
         header('Content-Type: application/json');
         echo json_encode($data);
     }
-
-/*$json = array_to_json($result);
-echo $json;
-$myResults;
-while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    $line = array_values($line);
-    $myObj->id = $line[0];
-    $myObj->nom = $line[1];
-    $myObj->cognom1 = $line[2];
-    $myObj->cognom2 = $line[3];
-    $myObj->trabajo = $line[4];
-    $myResults->treballador = $myResults;
-}
-
-echo json_encode($myResults);*/
-
-
-
-?>
+    ?>
