@@ -5,7 +5,7 @@ function exception_error_handler($errno, $errstr, $errfile, $errline ) {
 }
 set_error_handler("exception_error_handler");
 
-
+header('Content-Type: application/json');
 
 try {
 $fileContents = file_get_contents("server.conf");
@@ -19,13 +19,13 @@ $user = str_replace("user:", "", $array[2]);
 $password = str_replace("password:", "", $array[3]);
 $options = "host=$host dbname=$dbname user=$user password=$password";
 
+
 //L'usuari jsonuser només té permisos per a fer consultes select
 try {
     //$dbconn = pg_connect("host=localhost dbname=postgres user=jsonuser password=jsonuser");
     $dbconn = pg_connect($options);
-}
-    catch (Exception $e) {
-    $myObj = new stdClass;
+}   catch (Exception $e) {
+            $myObj = new stdClass;
     
     if (!strpos($e, "autentifi")) 
         $myObj->error="Can't connect to db";
@@ -37,7 +37,11 @@ try {
     return;
 }
 
-$query = 'SELECT * FROM json.registre WHERE id = 1000';
+
+
+$query = 'DELETE FROM json.registre WHERE id = 1000';
+
+
 try {
 $result = pg_query($query);
 } catch (Exception $e) {
